@@ -1,12 +1,15 @@
 import "./OpenOrder.css";
 import { useOrders } from "../../../context/OrderContext";
 const OpenOrder = () => {
-  const { orders } = useOrders();
-
+  const { orders, deleteOrder } = useOrders();
+  console.log(orders, deleteOrder);
+  const handleCancel = (orderId) => {
+    deleteOrder(orderId);
+  };
   return (
     <div className="open-orders-container">
       {orders.map((order, index) => (
-        <div key={`order-${index}`} className="order-table-row">
+        <div key={`order-${index}`} className="order-table-row" id={order.id}>
           <div className="order">
             <div className="order-header">
               <div className="order-title">{order.title}</div>
@@ -23,7 +26,12 @@ const OpenOrder = () => {
             </div>
             <div className="order-percentage">
               <div className="percentage-val">{order.percentage}%</div>
-              <button className="order-button">Cancel</button>
+              <button
+                className="order-button"
+                onClick={() => handleCancel(order.id)}
+              >
+                Cancel
+              </button>
             </div>
           </div>
           <div className="order-detail">
