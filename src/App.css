@@ -1,0 +1,48 @@
+/* src/App.css */
+.sports-trading-app {
+  min-width: 400px;
+  max-width: 480px;
+  margin: auto auto;
+  padding: 20px;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #000000; /* Changed to black */
+  min-height: 100vh;
+}
+
+/* Header styles */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #000000; /* Black text */
+}
+
+/* Section titles */
+.section-title {
+  color: #000000; /* Black text */
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+/* Table/grid text */
+.order-row,
+.position-item,
+.order-item {
+  color: #000000; /* Black text */
+}
+
+/* Secondary text for less important info */
+.secondary-text {
+  color: #4b5563; /* Dark gray (not pure black) */
+  font-size: 0.875rem;
+}
+.app-body {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
